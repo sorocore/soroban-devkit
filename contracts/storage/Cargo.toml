@@ -1,0 +1,13 @@
+[package]
+name = "soroban_storage"
+version = "0.0.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# Add soroban-sdk when implementing
+
+[package.metadata]
+authors = ["soroban-devkit"]

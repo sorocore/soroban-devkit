@@ -1,0 +1,79 @@
+# Node
+node_modules/
+.pnp/
+.pnp.js
+
+# PNPM
+.pnpm-store/
+pnpm-lock.yaml
+
+# Build outputs
+dist/
+build/
+coverage/
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Docker
+docker-compose.override.yml
+*.dockerfile
+*.dockerignore
+
+# Rust / Soroban
+target/
+**/target/
+**/Cargo.lock
+**/Xargo.toml
+.soroban/*
+.soroban/target/
+
+# Generated
+dist-*/
+.build/
+
+# Misc
+*.pem
+*.key
+
+# Editor temp files
+*.swp
+
+# secrets
+secrets.json
+
+# Recommended: ignore generated API docs
+docs/api/
+
+# GitHub Actions
+.vscode-test/
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# npm package
+npm-debug.log*

@@ -1,0 +1,12 @@
+* text=auto
+*.rs text
+*.ts text
+*.tsx text
+*.js text
+
+# Ensure consistent EOL for scripts
+*.sh text eol=lf
+
+# Lock files
+pnpm-lock.yaml text
+Cargo.lock text

@@ -1,0 +1,13 @@
+{
+  "name": "@soroban-devkit/express-example",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "tsup": "^6.0.0",
+    "typescript": "^5.5.2"
+  }
+}

@@ -1,0 +1,10 @@
+[package]
+name = "soroban_events"
+version = "0.0.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[package.metadata]
+authors = ["soroban-devkit"]

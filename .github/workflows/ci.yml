@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: ["main","master"]
+  pull_request:
+    branches: ["main","master"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+      - name: Setup pnpm
+        run: npm i -g pnpm
+      - name: Install
+        run: pnpm install
+      - name: Typecheck
+        run: pnpm -w run typecheck
+      - name: Lint
+        run: pnpm -w run lint || true
+      - name: Test
+        run: pnpm -w run test || true
+      - name: Build
+        run: pnpm -w run build

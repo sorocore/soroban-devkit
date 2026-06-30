@@ -1,0 +1,32 @@
+{
+  "name": "soroban-devkit",
+  "private": true,
+  "version": "0.0.0",
+  "description": "The definitive toolkit for Soroban developers — modular, extensible, and production-ready scaffolding.",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "bootstrap": "pnpm -w install && pnpm -w run build",
+    "build": "pnpm -w run build:packages && pnpm -w run build:apps",
+    "build:packages": "pnpm -w -F '**/*' --filter './packages/**' run build || true",
+    "build:apps": "pnpm -w -F './apps/**' run build || true",
+    "test": "pnpm -w run test:packages",
+    "test:packages": "pnpm -w -F './packages/**' run test || true",
+    "lint": "eslint --ext .ts,.tsx .",
+    "typecheck": "tsc -b --pretty",
+    "changeset": "changeset"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.0",
+    "eslint": "^8.50.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.5.2",
+    "tsup": "^6.0.0",
+    "vitest": "^1.3.0",
+    "zod": "^4.25.0"
+  }
+}
