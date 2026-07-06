@@ -9,5 +9,8 @@
   "devDependencies": {
     "tsup": "^6.0.0",
     "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "fastify": "5.10.0"
   }
 }
